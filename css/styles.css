@@ -1,0 +1,93 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  color: #222222;
+  max-width: 1440px;
+  min-width: 375px;
+  margin: 0 auto;
+}
+
+.top-nav {
+  background-color: #222222;
+}
+.top-nav nav {
+  text-align: right;
+  padding: 24px 26px;
+}
+.top-nav nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+}
+.top-nav nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header .header-img {
+  position: relative;
+}
+header .header-img img {
+  width: 100%;
+}
+header .header-img .header-img-text {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  text-align: center;
+  padding: 0 20px;
+  background-color: rgba(250, 250, 250, 0.3);
+}
+
+.general-information {
+  padding: 20px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .top-nav nav a {
+    margin-left: 65px;
+  }
+
+  header .header-img {
+    height: 500px;
+    overflow: hidden;
+  }
+  header .header-img .header-img-text {
+    font-size: 1.5em;
+    top: 22%;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .header-img {
+    height: 700px;
+  }
+  header .header-img .header-img-text {
+    font-size: 2.4em;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  header .header-img {
+    height: 800px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
